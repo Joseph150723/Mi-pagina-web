@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tecnologías Web Interactivas</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script>
+    function mostrarFrase() {
+      const contenedor = document.getElementById('intro-msg');
+      contenedor.innerHTML = '<img src="img/frase-motivadora.png" alt="Frase Motivadora" class="imagen-frase">';
+    }
+  </script>
+</head>
+<body>
 
+  <header>
+    <img src="img/logo-vallegrande.png" alt="Logo Valle Grande" class="logo grande">
+    <h1>Tecnologías Web para Analistas</h1>
+    <nav class="nav-botones">
+      <a href="#introduccion" class="boton-nav">Introducción</a>
+      <a href="#html" class="boton-nav">HTML</a>
+      <a href="#css" class="boton-nav">CSS</a>
+      <a href="#javascript" class="boton-nav">JavaScript</a>
+      <a href="#interoperabilidad" class="boton-nav">Interoperabilidad</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="introduccion" class="seccion">
+      <h2>Introducción al Desarrollo Web</h2>
+      <p>El desarrollo web combina creatividad, lógica y herramientas tecnológicas para construir experiencias digitales interactivas. Conocer cómo funcionan HTML, CSS y JavaScript permite a los analistas de sistemas diseñar y validar prototipos funcionales para proyectos reales.</p>
+      <p>Desde páginas informativas hasta sistemas de gestión empresarial, estas tecnologías permiten estructurar la información, definir estilos visuales atractivos e implementar lógica que responde a las acciones del usuario.</p>
+      <img src="img/analista-sistemas.png" alt="Analista de Sistemas">
+      <button onclick="mostrarFrase()" class="boton-nube">Mostrar mensaje</button>
+      <div id="intro-msg" class="contenedor-frase"></div>
+    </section>
+
+    <section id="html" class="seccion">
+      <h2>HTML - Lenguaje de Marcado</h2>
+      <img src="img/logo-html.png" alt="Logo HTML">
+      <p>HTML organiza el contenido en una estructura lógica, facilitando la comprensión tanto para navegadores como para desarrolladores. Utiliza etiquetas semánticas que describen el tipo de contenido que envuelven.</p>
+      <h3>Ejemplo básico:</h3>
+      <pre><code>&lt;header&gt;
+  &lt;h1&gt;Mi Sitio Web&lt;/h1&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;p&gt;Contenido principal.&lt;/p&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+  &lt;p&gt;Pie de página.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+      <h3>Elementos clave:</h3>
+      <ul>
+        <li>&lt;a&gt; para enlaces</li>
+        <li>&lt;img&gt; para imágenes</li>
+        <li>&lt;form&gt; para formularios</li>
+        <li>&lt;table&gt; para tablas de datos</li>
+        <li>Atributos como <code>class</code>, <code>id</code>, <code>href</code>, <code>src</code></li>
+      </ul>
+    </section>
+
+    <section id="css" class="seccion">
+      <h2>CSS - Diseño Visual</h2>
+      <img src="img/logo-css.png" alt="Logo CSS">
+      <p>CSS permite definir estilos de forma centralizada. Esto mejora la mantenibilidad y promueve la separación entre la estructura del contenido y su presentación visual.</p>
+      <h3>Ejemplo práctico:</h3>
+      <pre><code>h1 {
+  color: #2980b9;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}</code></pre>
+      <h3>Técnicas modernas:</h3>
+      <ul>
+        <li><strong>Flexbox:</strong> para alinear elementos de manera flexible.</li>
+        <li><strong>Grid:</strong> para crear diseños en cuadrícula.</li>
+        <li><strong>Media queries:</strong> para adaptar el diseño a diferentes dispositivos.</li>
+        <li><strong>Animaciones:</strong> con <code>@keyframes</code> y <code>transition</code>.</li>
+      </ul>
+    </section>
+
+    <section id="javascript" class="seccion">
+      <h2>JavaScript - Interactividad</h2>
+      <img src="img/logo-js.png" alt="Logo JavaScript">
+      <p>JavaScript es esencial para cualquier sitio web dinámico. Permite manipular el contenido, reaccionar a eventos y comunicarse con servidores sin recargar la página.</p>
+      <h3>Ejemplo de interacción:</h3>
+      <pre><code>document.querySelector('button').addEventListener('click', () => {
+  alert('¡Hola desde JavaScript!');
+});</code></pre>
+      <h3>Aplicaciones comunes:</h3>
+      <ul>
+        <li>Validación de formularios</li>
+        <li>Creación de galerías de imágenes</li>
+        <li>Notificaciones al usuario</li>
+        <li>Petición de datos usando <code>fetch()</code></li>
+      </ul>
+    </section>
+
+    <section id="interoperabilidad" class="seccion">
+      <h2>Integración de Tecnologías</h2>
+      <img src="img/interoperabilidad-sistemas.png" alt="Interacción entre tecnologías">
+      <p>HTML, CSS y JavaScript funcionan de forma conjunta para crear experiencias completas:</p>
+      <ul>
+        <li>HTML define la estructura y el contenido.</li>
+        <li>CSS da estilo y presenta visualmente ese contenido.</li>
+        <li>JavaScript le otorga vida, reaccionando al usuario y manipulando la estructura.</li>
+      </ul>
+      <h3>Ejemplo de integración:</h3>
+      <pre><code>&lt;h2 id="mensaje"&gt;Hola usuario&lt;/h2&gt;
+&lt;button onclick="actualizarTexto('mensaje', 'Texto actualizado con JavaScript')"&gt;Actualizar&lt;/button&gt;</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Valle Grande | Desarrollado por un Analista de Sistemas</p>
+  </footer>
+
+</body>
+</html>
